@@ -2,8 +2,9 @@
 
 VueJs 3 Learning
 
-![image](https://user-images.githubusercontent.com/97748602/188306731-c17e7b40-7e6e-4042-a1d1-89a07778064f.png)
-
+<p align="center">
+  ![image](https://user-images.githubusercontent.com/97748602/188306731-c17e7b40-7e6e-4042-a1d1-89a07778064f.png)
+</p>
 
 WHAT IS VUEJS?
 
