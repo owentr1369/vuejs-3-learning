@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-family: "Inter", sans-serif;
+      }
+      .card-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+      .card {
+        width: 200px;
+        height: 350px;
+        background: #ddd;
+        border-radius: 8px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: left;
+        flex-direction: column;
+        padding-left: 10px;
+        padding-top: 20px;
+      }
+      .card img {
+        width: 100%;
+      }
+      h1,
+      h2,
+      h3 {
+        width: 100%;
+      }
+      .card.active {
+        background-color: #777;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="app">
+      <div class="card-container">
+        <div
+          class="card"
+          :class="{active: product.inCart}"
+          v-for="product in productComputed"
+          :key="product.id"
+          @click="select($e, product)"
+        >
+          <img :src="product.img" alt="" />
+          <h1>ID: {{product.id}}</h1>
+          <h2>Name: {{product.name}}</h2>
+          <h3>Price: {{product.price}}</h3>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script>
+    const { createApp } = Vue;
+    createApp({
+      data() {
+        return {
+          products: [
+            {
+              id: 1,
+              img: "https://image.vietnamnews.vn/uploadvnnews/Article/2020/3/1/70353_CH1.jpg",
+              name: "Product1",
+              price: 20,
+              inCart: false,
+            },
+            {
+              id: 2,
+              img: "https://image.vietnamnews.vn/uploadvnnews/Article/2020/3/1/70353_CH1.jpg",
+              name: "Product2",
+              price: 30,
+              inCart: false,
+            },
+            {
+              id: 3,
+              img: "https://image.vietnamnews.vn/uploadvnnews/Article/2020/3/1/70353_CH1.jpg",
+              name: "Product3",
+              price: 24,
+              inCart: false,
+            },
+          ],
+        };
+      },
+      methods: {
+        select(e, product) {
+          product.inCart = !product.inCart;
+        },
+      },
+      computed: {
+        productComputed() {
+          return this.products.filter((product) => {
+            return product.price < 25;
+          });
+        },
+      },
+    }).mount("#app");
+  </script>
+</html>
