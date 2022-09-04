@@ -3,7 +3,7 @@
 VueJs 3 Learning
 
 <p align="center">
-  <img src="[http://www.fillmurray.com/460/300](https://user-images.githubusercontent.com/97748602/188306731-c17e7b40-7e6e-4042-a1d1-89a07778064f.png)">
+  <img width="720" height="365" src="[http://www.fillmurray.com/460/300](https://user-images.githubusercontent.com/97748602/188306731-c17e7b40-7e6e-4042-a1d1-89a07778064f.png)">
 </p>
 
 WHAT IS VUEJS?
