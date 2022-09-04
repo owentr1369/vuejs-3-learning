@@ -3,7 +3,7 @@
 VueJs 3 Learning
 
 <p align="center">
-  <img width="720" height="365" src="https://s3.amazonaws.com/fullstackfeed/images/vuejs-4.jpg">
+  <img width="auto" height="auto" src="https://s3.amazonaws.com/fullstackfeed/images/vuejs-4.jpg">
 </p>
 
 WHAT IS VUEJS?
