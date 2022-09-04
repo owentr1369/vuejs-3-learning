@@ -1,0 +1,9 @@
+What is Vue CLI?
+- Standard tooling baseline for the Vue ecosystem
+- Focus on writing your app instead of spending days wrangling with configurations
+
+What are vue cli providing?
+- Save development time
+- Provides us with a live re-load dev server
+- Optimze our code for production
+- Easy integration
