@@ -13,7 +13,7 @@ Vue (pronounced /vjuː/, like view) is a JavaScript framework for building user 
 It was created by Evan You, and is maintained by him and the rest of the active core team members.
 
 <p align="center">
-  <img width="570.5" height="320.5" src="https://i.ytimg.com/vi/P_c2JngIEZI/maxresdefault.jpg">
+  <img width="auto" height="auto" src="https://i.ytimg.com/vi/P_c2JngIEZI/maxresdefault.jpg">
 </p>
 
 VUE DEVELOPER ROADMAP
