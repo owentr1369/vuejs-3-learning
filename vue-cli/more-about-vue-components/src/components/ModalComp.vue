@@ -1,6 +1,6 @@
 <template>
-  <div class="modal" tabindex="-1">
-    <div class="modal-dialog">
+  <div class="modal fade" tabindex="-1" @click.self="closeModal">
+    <div class="modal-dialog" @click.self="closeModal">
       <div class="modal-content" :class="{ 'bg-purple': theme == 'contact' }">
         <div class="modal-header">
           <h5 class="modal-title">{{ modalTitle }}</h5>
@@ -9,22 +9,16 @@
             class="btn-close"
             data-bs-dismiss="modal"
             aria-label="Close"
+            @click="closeModal"
           >
             X
           </button>
         </div>
         <div class="modal-body">
-          <p>{{ modalContent }}</p>
+          <slot name="body"></slot>
         </div>
         <div class="modal-footer">
-          <button
-            type="button"
-            class="btn btn-secondary"
-            data-bs-dismiss="modal"
-          >
-            Close
-          </button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <slot name="footer"></slot>
         </div>
       </div>
     </div>
@@ -51,6 +45,11 @@ export default {
       },
     },
   },
+  methods: {
+    closeModal() {
+      this.$emit("closeModal");
+    },
+  },
 };
 </script>
 
@@ -67,6 +66,7 @@ export default {
   overflow-x: hidden;
   overflow-y: auto;
   outline: 0;
+  background: rgba(0, 0, 0, 0.4);
 }
 .fade {
   transition: opacity 0.15s linear;
@@ -78,6 +78,9 @@ export default {
 .modal-dialog {
   max-width: 500px;
   margin: 1.75rem auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 .modal-content {
   position: relative;

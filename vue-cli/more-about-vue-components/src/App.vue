@@ -1,11 +1,24 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
   <HelloWorld msg="Welcome to Your Vue.js App" />
-  <modal-comp
-    :modalTitle="modalTitle"
-    :modalContent="modalContent"
-    theme="contact"
-  ></modal-comp>
+  <teleport to="body">
+    <modal-comp
+      v-if="isShowModal"
+      :modalTitle="modalTitle"
+      :modalContent="modalContent"
+      theme="contact"
+      @closeModal="onToggleModal"
+    >
+      <template v-slot:footer>
+        <h2>This is the footer</h2>
+      </template>
+      <template v-slot:body>
+        <label for="">Name</label>
+        <input type="password" name="" id="" />
+      </template> </modal-comp
+  ></teleport>
+  <!-- Event modifiers -->
+  <button @click="onToggleModal">Open Modal</button>
 </template>
 
 <script>
@@ -21,7 +34,13 @@ export default {
     return {
       modalTitle: "Modal title",
       modalContent: "This is modal content",
+      isShowModal: false,
     };
+  },
+  methods: {
+    onToggleModal() {
+      this.isShowModal = !this.isShowModal;
+    },
   },
 };
 </script>
@@ -34,5 +53,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+button {
+  cursor: pointer;
 }
 </style>
