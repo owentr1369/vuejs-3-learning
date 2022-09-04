@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-family: "Inter", sans-serif;
+      }
+      .card-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+      .card {
+        width: 100px;
+        height: 100px;
+        background: #ddd;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello Vuejs</h1>
+    <section id="app">
+      <div class="card-container">
+        <div class="card" @mouseover="triggerLog">Mouse Over</div>
+        <div class="card" @mouseleave="triggerLog">Mouse Leave</div>
+        <div class="card" @dblclick="triggerLog">Mouse double click</div>
+        <div class="card" @mousemove="triggerLog">Mouse Move</div>
+      </div>
+    </section>
+  </body>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script>
+    const { createApp } = Vue;
+    createApp({
+      data() {
+        return {
+          msg: "Hello Vue!",
+        };
+      },
+      methods: {
+        triggerLog() {
+          console.log("Mouse Event");
+        },
+      },
+    }).mount("#app");
+  </script>
+</html>
