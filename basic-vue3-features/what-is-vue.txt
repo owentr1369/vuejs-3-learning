@@ -1,0 +1,18 @@
+What is Vue?
+
+- Frontend, JavaScript Framework (TypeScript Support)
+- Used to create dynamic & data-driven websites (SPAs - Single Page Applications)
+- Can also be used to create stand-alone widgets
+
+Website use Vue
+- Vue is used to create a whole website with multiple pages & components
+- These websites are normally called Single Page Applications
+- All routing is done in the browser (not on the server)
+
+What is SPA?
+Single Page Applications:
+- Only a single HTML page sent (initially) to the browser
+- Vue intercepts subsequent requests and handles "page" changes in the browser by
+swapping what components are shown on the page
+- Faster and Smoother experience
+

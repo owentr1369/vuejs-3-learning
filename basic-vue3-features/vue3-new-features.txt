@@ -1,0 +1,23 @@
+The Composition API
+- Improves on re-usability, organization & readability
+- New setup() function
+
+Multiple Root Component
+- Vue 3 no longer requires a single root node for components that means it provides
+developer multiple root in the template
+
+Teleport Component
+- Render content from one component in a different place in the DOM
+- Useful for things like modals
+
+Suspense Component 
+- Used to handle asynchonous component easily
+- Can provide fall-back content (e.g. a spinner) until data is loaded
+
+TypeScript Component
+- Can now write Vue applications using TypeScript
+
+More Changes...
+- Multiple v-models for custom components
+- Improved Reactivity
+- Performance gains
