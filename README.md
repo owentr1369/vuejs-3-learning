@@ -10,11 +10,11 @@ WHAT IS VUEJS?
 
 Vue (pronounced /vjuː/, like view) is a JavaScript framework for building user interfaces. It builds on top of standard HTML, CSS and JavaScript, and provides a declarative and component-based programming model that helps you efficiently develop user interfaces, be it simple or complex.
 
-It was created by Evan You, and is maintained by him and the rest of the active core team members.
-
 <p align="center">
   <img width="auto" height="auto" src="https://i.ytimg.com/vi/P_c2JngIEZI/maxresdefault.jpg">
 </p>
+
+It was created by Evan You, and is maintained by him and the rest of the active core team members.
 
 VUE DEVELOPER ROADMAP
 
