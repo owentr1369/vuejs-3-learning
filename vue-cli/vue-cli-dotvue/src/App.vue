@@ -1,17 +1,26 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <header-comp ref="header"></header-comp>
+  <HelloWorld ref="hello" msg="Welcome to Your Vue.js App" />
+  <button @click="onChange">Click me!</button>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from "./components/HelloWorld.vue";
+import HeaderComp from "./components/HeaderComp.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    HelloWorld,
+    HeaderComp,
+  },
+  methods: {
+    onChange() {
+      console.log("Running...");
+      console.log(this.$refs.header);
+    },
+  },
+};
 </script>
 
 <style>

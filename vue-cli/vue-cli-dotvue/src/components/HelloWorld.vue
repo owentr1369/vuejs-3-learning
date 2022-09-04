@@ -10,6 +10,11 @@ export default {
   props: {
     msg: String,
   },
+  methods: {
+    onTesting() {
+      console.log("Running console testing function...");
+    },
+  },
 };
 </script>
 
