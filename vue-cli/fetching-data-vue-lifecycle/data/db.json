@@ -1,0 +1,34 @@
+{
+    "transactions": [
+        {
+            "id": 1,
+            "name": "Go shopping",
+            "price": 1000
+        },
+        {
+            "id": 2,
+            "name": "Buy food",
+            "price": 122
+        },
+        {
+            "id": 3,
+            "name": "Traveling",
+            "price": 2400
+        },
+        {
+            "id": 4,
+            "name": "Buy laptop",
+            "price": 1600
+        },
+        {
+            "id": 5,
+            "name": "Buy games",
+            "price": 500
+        },
+        {
+            "id": 6,
+            "name": "Paycheck",
+            "price": 3000
+        }
+    ]
+}
