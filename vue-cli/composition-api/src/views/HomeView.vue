@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { computed, ref } from "vue";
+import { computed, ref, watch, watchEffect } from "vue";
 
 export default {
   name: "HomeView",
@@ -18,7 +18,6 @@ export default {
   // Reactive is used for object, array...
   setup() {
     const searchText = ref("");
-
     let students = ["Jack", "John", "Kate", "Owen", "Jean"];
 
     const filtedStudents = computed(() => {
@@ -26,6 +25,15 @@ export default {
         student.toLowerCase().includes(searchText.value.toLowerCase())
       );
     });
+    watch(searchText, (oldVal, newVal) => {
+      console.log(oldVal, newVal);
+    });
+    watchEffect(() => {
+      if (searchText.value) {
+        console.log("Searching...");
+      }
+    });
+    // Computed return value, watchEffect don't
     return { filtedStudents, students, searchText };
   },
 };
