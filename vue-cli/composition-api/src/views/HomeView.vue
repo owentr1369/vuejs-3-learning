@@ -1,15 +1,15 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
-    <p>{{ fullName }}</p>
-    <h2>{{ car.name }}</h2>
-    <h3>{{ car.price }}</h3>
-    <button @click="onChange">Click me!</button>
+    <input type="text" v-model="searchText" />
+    <div class="block" v-for="(student, index) in filtedStudents" :key="index">
+      <h2>{{ student }}</h2>
+    </div>
   </div>
 </template>
 
 <script>
-import { reactive, ref } from "vue";
+import { computed, ref } from "vue";
 
 export default {
   name: "HomeView",
@@ -17,16 +17,16 @@ export default {
   // Ref is used for number, string...
   // Reactive is used for object, array...
   setup() {
-    const fullName = ref("Tran");
-    const car = reactive({
-      price: 1000,
-      name: "Mec",
+    const searchText = ref("");
+
+    let students = ["Jack", "John", "Kate", "Owen", "Jean"];
+
+    const filtedStudents = computed(() => {
+      return students.filter((student) =>
+        student.toLowerCase().includes(searchText.value.toLowerCase())
+      );
     });
-    function onChange() {
-      fullName.value = "Tran Tam";
-      car.price = 2000;
-    }
-    return { fullName, onChange, car };
+    return { filtedStudents, students, searchText };
   },
 };
 </script>
