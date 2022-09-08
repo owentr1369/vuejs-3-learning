@@ -7,5 +7,9 @@
 <script>
 export default {
   name: "HomeView",
+  setup() {},
+  created() {
+    this.$store.dispatch("fetchProducts");
+  },
 };
 </script>
