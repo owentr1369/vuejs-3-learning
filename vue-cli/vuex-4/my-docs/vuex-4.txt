@@ -1,0 +1,2 @@
+What is VueX?
+VueX is a state management pattern + library for Vue.js applications
